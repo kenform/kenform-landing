@@ -1,0 +1,121 @@
+@mixin button($bgcolor, $url, $x1, $y1, $bor, $col) {
+	background: $bgcolor;
+	-webkit-mask: url($url);
+	mask: url($url);
+	-webkit-mask-size: $x1 $y1;
+	mask-size: $x1 $y1;
+	border: $bor;
+	color: $col;
+}
+.container_1 {
+	button {
+		@include button(
+			#171721,
+			'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png',
+			2300%,
+			100%,
+			none,
+			#fff
+		);
+		-webkit-animation: ani2 0.7s steps(22) forwards;
+		animation: ani2 0.7s steps(22) forwards;
+		@media (any-hover: hover) {
+			&:hover {
+				-webkit-animation: ani 0.7s steps(22) forwards;
+				animation: ani 0.7s steps(22) forwards;
+			}
+		}
+	}
+}
+.container_2 {
+	button {
+		@include button(
+			#000,
+			'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png',
+			3000%,
+			100%,
+			none,
+			#fff
+		);
+		-webkit-animation: ani2 0.7s steps(29) forwards;
+		animation: ani2 0.7s steps(29) forwards;
+		@media (any-hover: hover) {
+			&:hover {
+				-webkit-animation: ani 0.7s steps(29) forwards;
+				animation: ani 0.7s steps(29) forwards;
+			}
+		}
+	}
+}
+.container_3 {
+	button {
+		@include button(
+			#000,
+			'https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png',
+			7100%,
+			100%,
+			none,
+			#fff
+		);
+		-webkit-animation: ani2 0.7s steps(70) forwards;
+		animation: ani2 0.7s steps(70) forwards;
+
+		@media (any-hover: hover) {
+			&:hover {
+				-webkit-animation: ani 0.7s steps(70) forwards;
+				animation: ani 0.7s steps(70) forwards;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes ani {
+	from {
+		mask-position: 0 0;
+	}
+
+	to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+}
+
+@keyframes ani {
+	from {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+
+	to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+}
+
+@-webkit-keyframes ani2 {
+	from {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+
+	to {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+}
+
+@keyframes ani2 {
+	from {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+
+	to {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+}
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}

@@ -1,0 +1,190 @@
+@import '../../../styles/components/variables.scss';
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 24px;
+	border-radius: 5px;
+	border: 2px solid #000;
+	text-decoration: none;
+	transition: all 0.25s ease-in-out;
+
+	svg {
+		width: 22px;
+		height: 22px;
+		margin-right: 12px;
+		flex: 0 0 22px;
+	}
+
+	span {
+		white-space: nowrap;
+	}
+
+	@media (max-width: 767.98px) {
+		justify-content: start;
+		padding: 15px 30px;
+	}
+}
+
+.header__button {
+	font-size: 16px;
+	padding: 8px 30px;
+	border-radius: 7px;
+	border: 1px solid #fff;
+	color: #fff;
+	background: transparent;
+
+	@media (min-width: 991.98px) {
+		&.menu-list__body {
+			display: none;
+		}
+	}
+
+	@media (max-width: 991.98px) {
+		display: none;
+
+		&.menu-list__body {
+			display: inline-flex;
+			padding: 30px 60px;
+			background: #5c62ec;
+			border: 1px solid #5c62ec;
+			font-size: 24px;
+		}
+
+		svg {
+			display: none;
+		}
+	}
+
+	@media (max-width: 479px) {
+		&.menu-list__body {
+			padding: 30px 40px;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #141a1d;
+			box-shadow: inset 300px 0 0 0 #fff;
+		}
+	}
+}
+
+.btn__Social {
+	width: 100%;
+	min-height: 52px;
+	padding: 14px 18px;
+	justify-content: center;
+	border-radius: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: transparent;
+	color: var(--project-color);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.2;
+	box-shadow: none;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+		flex: 0 0 20px;
+	}
+
+	@media (max-width: 767.98px) {
+		display: inline-flex;
+		justify-content: center;
+		width: 100%;
+		padding: 14px 18px;
+		font-size: 16px;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: rgba(92, 98, 236, 0.08);
+			border-color: rgba(92, 98, 236, 0.28);
+			color: var(--project-color);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}
+
+/* === portfolio contact social polish === */
+.btn__Social {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn__Social::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(92, 98, 236, 0.18), transparent 58%);
+	opacity: 0;
+	transition: opacity 0.22s ease;
+	pointer-events: none;
+}
+
+.btn__Social span,
+.btn__Social svg {
+	position: relative;
+	z-index: 1;
+}
+
+@media (any-hover: hover) {
+	.btn__Social:hover {
+		transform: translateY(-2px);
+		background: rgba(92, 98, 236, 0.08);
+		border-color: rgba(92, 98, 236, 0.58);
+		box-shadow: 0 12px 28px rgba(92, 98, 236, 0.12);
+	}
+
+	.btn__Social:hover::before {
+		opacity: 1;
+	}
+}
+
+.btn__Social:focus-visible {
+	outline: none;
+	border-color: rgba(92, 98, 236, 0.8);
+	box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.18);
+}
+/* === /portfolio contact social polish === */
+
+/* === contacts equal height and readable hover fix === */
+.btn__Social {
+	color: var(--project-color) !important;
+	background: rgba(255, 255, 255, 0.015);
+	border-color: rgba(177, 178, 179, 0.2);
+}
+
+@media (any-hover: hover) {
+	.btn__Social:hover {
+		color: #ffffff !important;
+		background: rgba(92, 98, 236, 0.32) !important;
+		border-color: rgba(92, 98, 236, 0.72) !important;
+		box-shadow: 0 12px 28px rgba(92, 98, 236, 0.16);
+	}
+
+	.btn__Social:hover svg,
+	.btn__Social:hover span {
+		color: #ffffff !important;
+		fill: currentColor;
+	}
+}
+
+.btn__Social:focus-visible {
+	outline: none;
+	border-color: rgba(92, 98, 236, 0.82) !important;
+	box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.2);
+}
+/* === /contacts equal height and readable hover fix === */

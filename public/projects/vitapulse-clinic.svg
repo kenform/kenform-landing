@@ -1,0 +1,22 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="42" fill="#F4FBFF"/>
+  <circle cx="1020" cy="120" r="220" fill="#26C98D" opacity=".14"/>
+  <circle cx="130" cy="80" r="220" fill="#2876EE" opacity=".10"/>
+  <rect x="80" y="70" width="1040" height="92" rx="34" fill="white" stroke="#D8E7EF"/>
+  <rect x="108" y="92" width="54" height="54" rx="18" fill="#ECF8F4"/>
+  <path d="M119 125C119 116 126 108 135 108C144 108 151 116 151 125" stroke="#26C98D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M118 122H128L134 110L141 137L148 122H156" stroke="#123044" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="182" y="130" fill="#123044" font-family="Arial, sans-serif" font-size="30" font-weight="800">VitaPulse</text>
+  <rect x="790" y="96" width="250" height="48" rx="24" fill="#26C98D"/>
+  <text x="845" y="128" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="800">Запись на приём</text>
+  <text x="92" y="265" fill="#15976A" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="4">МЕДИЦИНСКАЯ КЛИНИКА</text>
+  <text x="92" y="350" fill="#123044" font-family="Arial, sans-serif" font-size="70" font-weight="900">Медицинская</text>
+  <text x="92" y="430" fill="#123044" font-family="Arial, sans-serif" font-size="70" font-weight="900">помощь без шума</text>
+  <text x="96" y="490" fill="#667B8B" font-family="Arial, sans-serif" font-size="24">Современный медицинский сайт с чистым UI/UX</text>
+  <rect x="92" y="545" width="230" height="58" rx="29" fill="#26C98D"/>
+  <text x="132" y="583" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="800">Записаться</text>
+  <rect x="610" y="245" width="470" height="330" rx="38" fill="#123044" opacity=".18"/>
+  <rect x="640" y="410" width="410" height="110" rx="30" fill="white" opacity=".88"/>
+  <text x="678" y="463" fill="#123044" font-family="Arial, sans-serif" font-size="28" font-weight="800">Запись и консультации</text>
+  <text x="678" y="495" fill="#667B8B" font-family="Arial, sans-serif" font-size="18">Услуги • прайс • контакты • врачи</text>
+</svg>

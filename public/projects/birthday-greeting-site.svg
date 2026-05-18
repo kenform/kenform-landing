@@ -1,0 +1,31 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="640" rx="44" fill="#FFF8EF"/>
+  <circle cx="104" cy="92" r="112" fill="#F4C7AA" opacity=".55"/>
+  <circle cx="850" cy="104" r="142" fill="#D9E5CF" opacity=".8"/>
+  <circle cx="798" cy="532" r="128" fill="#F7DFCC" opacity=".82"/>
+  <rect x="90" y="86" width="780" height="468" rx="38" fill="white" fill-opacity=".56" stroke="white" stroke-width="2"/>
+  <rect x="136" y="132" width="312" height="54" rx="27" fill="#2F2925"/>
+  <rect x="162" y="153" width="92" height="12" rx="6" fill="#F5D49B"/>
+  <rect x="274" y="153" width="116" height="12" rx="6" fill="#F5D49B" opacity=".55"/>
+  <text x="136" y="274" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="900" fill="#2F2925">С днём</text>
+  <text x="136" y="342" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="900" fill="#2F2925">рождения!</text>
+  <rect x="142" y="384" width="260" height="18" rx="9" fill="#6B5D52" opacity=".42"/>
+  <rect x="142" y="418" width="330" height="18" rx="9" fill="#6B5D52" opacity=".25"/>
+  <rect x="142" y="472" width="206" height="52" rx="26" fill="#2F2925"/>
+  <rect x="382" y="472" width="184" height="52" rx="26" fill="white" fill-opacity=".72" stroke="#D9B99E"/>
+  <g transform="translate(575 186)">
+    <rect x="52" y="165" width="220" height="148" rx="30" fill="#C06F47"/>
+    <rect x="30" y="135" width="264" height="36" rx="18" fill="#2F2925"/>
+    <rect x="146" y="135" width="34" height="178" fill="#F5D49B"/>
+    <path d="M148 134C96 112 86 72 118 58C150 44 166 86 163 133" stroke="#F5D49B" stroke-width="22" stroke-linecap="round"/>
+    <path d="M176 134C229 112 239 72 207 58C175 44 159 86 162 133" stroke="#F5D49B" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="26" cy="74" r="7" fill="white" opacity=".9"/>
+    <circle cx="314" cy="107" r="7" fill="white" opacity=".9"/>
+    <circle cx="66" cy="20" r="5" fill="#C06F47" opacity=".7"/>
+    <circle cx="285" cy="28" r="5" fill="#C06F47" opacity=".7"/>
+  </g>
+  <path d="M690 112h92" stroke="#C06F47" stroke-opacity=".42" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82 502h98" stroke="#C06F47" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="810" cy="304" r="54" stroke="#C06F47" stroke-opacity=".18" stroke-width="2"/>
+  <circle cx="746" cy="455" r="28" stroke="#C06F47" stroke-opacity=".2" stroke-width="2"/>
+</svg>

@@ -1,0 +1,100 @@
+{
+  "header": {
+    "logo-title": "Portfolio",
+    "About": "About",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contacts": "Contacts",
+    "Button": "GitHub Profile"
+  },
+  "intro": {
+    "title": "Hi, I’m Sergey",
+    "IM": "I build ",
+    "typeWritter-programmer": "websites for real tasks",
+    "typeWritter-frontend": "landing pages and interfaces",
+    "text": "I create modern websites, landing pages and small web apps — from structure and visual direction to responsive layout, GitHub and deployment.",
+    "staticRole": "websites"
+  },
+  "home": {
+    "ctaProjects": "View projects",
+    "ctaContacts": "Contact me",
+    "focus1": "Mobile-first",
+    "focus2": "React / Vite / Next.js",
+    "focus3": "GitHub + Vercel"
+  },
+  "section": {
+    "skills": {
+      "title": "Skills",
+      "suptitle": "Technologies and tools I work with."
+    },
+    "projects": {
+      "title": "Projects",
+      "suptitle": "A collection of websites, landing pages and interfaces I have built."
+    },
+    "contacts": {
+      "title": "Contacts",
+      "suptitle": "Have a website, landing page or portfolio idea? Send a short message."
+    }
+  },
+  "projects": {
+    "toggle-button": {
+      "all": "All",
+      "store": "Stores",
+      "landing": "Landings",
+      "mini": "Mini projects",
+      "new": "New"
+    },
+    "details": {
+      "buttons": {
+        "view-code1": "View",
+        "view-code2": "Code",
+        "live-app1": "View",
+        "live-app2": "Live App"
+      }
+    }
+  },
+  "Form": {
+    "title": "Write me",
+    "placeholder-email": "Your email",
+    "placeholder-name": "Your name",
+    "placeholder-message": "Message",
+    "Button-submit": "Send",
+    "Button-sending": "Sending...",
+    "Button-sent": "Sent!",
+    "Button-error": "Failed to send",
+    "Button-close": "Close",
+    "errors": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email. Example: name@gmail.com",
+      "nameRequired": "Please enter your name",
+      "messageRequired": "Please enter your message"
+    }
+  },
+  "a11y": {
+    "profile": "Sergey avatar",
+    "burger": "Open menu",
+    "githubIcon": "GitHub icon",
+    "projectPreview": "{{title}} project preview"
+  },
+  "language": {
+    "switchTo": "Switch language to {{lang}}"
+  },
+  "labels": {
+    "members": "Members",
+    "close": "Close",
+    "education": "Education",
+    "experience": "Experience",
+    "openCase": "Open case"
+  },
+  "footer": {
+    "home": "Home",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contacts": "Contacts",
+    "description": "Websites, landing pages and interfaces — clean, responsive and carefully polished.",
+    "github": "GitHub",
+    "rights": "© {{year}} Sergey. All rights reserved.",
+    "built": "Built by Sergey · Web & AI Development",
+    "crafted": "Crafted with code, runes and artificial intelligence."
+  }
+}

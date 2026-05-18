@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#09090b"/>
+<stop offset="0.55" stop-color="#18181b"/>
+<stop offset="1" stop-color="#92400e"/>
+</linearGradient>
+<linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#27272a"/>
+<stop offset="1" stop-color="#111827"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="800" fill="url(#bg)"/>
+<circle cx="980" cy="160" r="220" fill="#f59e0b" opacity="0.16"/>
+<circle cx="220" cy="660" r="260" fill="#f59e0b" opacity="0.08"/>
+<rect x="90" y="90" width="1020" height="620" rx="44" fill="#09090b" opacity="0.78" stroke="#f59e0b" stroke-opacity="0.22"/>
+<text x="140" y="210" fill="#fbbf24" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">BARBER LANDING</text>
+<text x="140" y="315" fill="#ffffff" font-family="Arial, sans-serif" font-size="76" font-weight="700">Premium</text>
+<text x="140" y="395" fill="#ffffff" font-family="Arial, sans-serif" font-size="76" font-weight="700">grooming UI</text>
+<text x="140" y="470" fill="#d4d4d8" font-family="Arial, sans-serif" font-size="28">Dark landing page • Services • Masters • Reviews</text>
+<rect x="750" y="190" width="260" height="360" rx="34" fill="url(#card)" stroke="#f59e0b" stroke-opacity="0.28"/>
+<circle cx="880" cy="310" r="86" fill="#f59e0b" opacity="0.22"/>
+<text x="820" y="330" fill="#fbbf24" font-family="Arial, sans-serif" font-size="72" font-weight="700">4.9</text>
+<rect x="790" y="440" width="180" height="22" rx="11" fill="#fbbf24" opacity="0.8"/>
+<rect x="790" y="482" width="130" height="18" rx="9" fill="#71717a"/>
+</svg>

@@ -1,0 +1,37 @@
+html {
+        scroll-behavior: smooth;
+}
+
+.landing-page {
+        overflow: hidden;
+}
+
+.landing-anchor {
+        scroll-margin-top: 96px;
+}
+
+.landing-page .projects__bg {
+        padding-top: clamp(92px, 9vw, 132px);
+}
+
+.landing-page #reviews {
+        position: relative;
+        z-index: 1;
+        padding-top: clamp(72px, 8vw, 112px);
+}
+
+.landing-page #contacts {
+        position: relative;
+        z-index: 1;
+}
+
+.header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(14px);
+}
+
+.menu__link {
+        cursor: pointer;
+}

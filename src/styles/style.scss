@@ -1,0 +1,273 @@
+@use 'sass:math';
+
+// Підключення міксинів ===========================================================================================================================================================================================================================================================================
+
+@import './components/variables';
+@import './components/mixins';
+@import './components/base';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&display=swap');
+
+$fontFamily: 'Nunito';
+$fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
+
+// Основні кольори
+$mainColor: #000; // Колір шрифту за замовчуванням
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileSmall: em(479.98); // Телефони S
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+// Обнулення ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+
+@import './components/null.scss';
+// Стилі тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
+body {
+	// Скролл заблоковано
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	// Сайт завантажений
+	.loaded & {
+	}
+}
+// Оболонка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фікс для слайдерів
+	> * {
+		min-width: 0;
+	}
+}
+// Обмежуючий контейнер ======================================================================================================================================================================================================================
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// Чуйна
+	[class*='__container'] {
+		@if ($maxWidthContainer>0) {
+			max-width: toRem($containerWidth);
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			@if ($maxWidthContainer>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			} @else {
+				@include adaptiveValue('padding-left', math.div($containerPadding, 2), 15);
+				@include adaptiveValue('padding-right', math.div($containerPadding, 2), 15);
+			}
+		}
+	}
+} @else {
+	// Брейк-поїнтами
+	[class*='__container'] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: toRem($containerWidth);
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: toRem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: toRem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+@import 'home.scss';
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}
+
+
+
+
+
+
+/* === safe title balance === */
+body :is(.projects__title, .section__title, .skills__title, .reviews__title, .contacts__title) {
+	font-size: clamp(48px, 5vw, 68px);
+	font-weight: 700;
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	text-decoration: none !important;
+	border-bottom: 0 !important;
+	text-wrap: balance;
+}
+
+body :is(.projects__subtitle, .projects__suptitle, .section__subtitle, .section__suptitle, .skills__subtitle, .skills__suptitle, .reviews__subtitle, .reviews__suptitle, .contacts__subtitle, .contacts__suptitle) {
+	max-width: 820px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: clamp(17px, 1.4vw, 20px);
+	font-weight: 400;
+	line-height: 1.58;
+	letter-spacing: -0.01em;
+	text-wrap: balance;
+}
+
+body :is(.intro__title, .hero__title) {
+	font-size: clamp(48px, 5vw, 66px);
+	font-weight: 700;
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	text-wrap: balance;
+}
+
+body :is(.intro__text, .intro__text p) {
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-align: left;
+}
+
+@media (max-width: 767.98px) {
+	body :is(.projects__title, .section__title, .skills__title, .reviews__title, .contacts__title) {
+		font-size: clamp(38px, 10vw, 50px);
+		line-height: 1.1;
+	}
+
+	body :is(.intro__title, .hero__title) {
+		font-size: clamp(38px, 10vw, 50px);
+		line-height: 1.1;
+	}
+
+	body :is(.projects__subtitle, .projects__suptitle, .section__subtitle, .section__suptitle, .skills__subtitle, .skills__suptitle, .reviews__subtitle, .reviews__suptitle, .contacts__subtitle, .contacts__suptitle) {
+		font-size: 16px;
+		line-height: 1.55;
+	}
+}
+/* === /safe title balance === */
+
+
+/* === hero typewriter restore === */
+.intro__title .Typewriter {
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: baseline;
+}
+
+.intro__title .Typewriter__wrapper {
+	display: inline;
+	white-space: normal;
+	overflow: visible;
+	color: #5c62ec;
+}
+
+.intro__title .Typewriter__cursor {
+	color: #5c62ec;
+	font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+	.intro__title .Typewriter {
+		display: inline;
+	}
+}
+/* === /hero typewriter restore === */
+
+
+/* === hero title size tune === */
+body .intro__title {
+	font-size: clamp(40px, 4.35vw, 58px) !important;
+	line-height: 1.13 !important;
+	letter-spacing: -0.02em !important;
+}
+
+body .intro__title .Typewriter,
+body .intro__title .Typewriter__wrapper,
+body .intro__title .Typewriter__cursor {
+	font-size: inherit !important;
+	line-height: inherit !important;
+}
+
+@media (max-width: 767.98px) {
+	body .intro__title {
+		font-size: clamp(34px, 9.2vw, 46px) !important;
+		line-height: 1.12 !important;
+	}
+}
+/* === /hero title size tune === */
+
+/* portfolio mobile hero final */
+@media (max-width: 767.98px) {
+  body .intro__title {
+    max-width: 12.8ch;
+    min-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(32px, 8.8vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  body .intro__title > span {
+    display: inline;
+  }
+
+  body .intro__static-accent {
+    display: inline;
+    color: var(--purple);
+    white-space: normal;
+  }
+
+  body .intro__title .Typewriter {
+    display: none;
+  }
+}
+/* /portfolio mobile hero final */
+
+@import './landing.scss';

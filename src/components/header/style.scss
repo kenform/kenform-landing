@@ -1,0 +1,216 @@
+//========================================================================================================================================================
+body._lock {
+	overflow: hidden;
+}
+header {
+}
+/* Nav */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	transition: all 0.3s ease 0s;
+	background-color: var(--header-bg);
+}
+.header__container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center;
+	column-gap: 25px;
+	@media (max-width: 767.98px) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+.menu__body {
+	display: flex;
+	flex: 1 0 auto;
+	justify-content: center;
+	color: var(--nav-text);
+	letter-spacing: normal;
+	.menu__list {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		column-gap: 30px;
+		flex-wrap: wrap;
+	}
+}
+
+.logo {
+	display: flex;
+	flex: 0 0 160px;
+
+	margin-right: auto;
+	color: var(--nav-text);
+	font-size: 24px;
+	z-index: 11;
+	@media (max-width: 479.98px) {
+		flex: 0 0 50px;
+	}
+	&__body {
+		display: flex;
+		gap: 10px;
+		p:first-letter {
+			color: #5c62ec;
+		}
+	}
+	&__icon {
+	}
+	&__title {
+		font-weight: 700;
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+		}
+		@media (max-width: 479.98px) {
+			display: none;
+		}
+	}
+}
+
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 10px;
+	align-items: center;
+	column-gap: 40px;
+	font-size: 16px;
+	font-weight: 700;
+
+	.menu__link {
+		color: var(--nav-text);
+		position: relative;
+		padding: 30px 0;
+		margin: -30px 0;
+		transition: color 0.3s ease 0s;
+		cursor: pointer;
+		&--active {
+			position: relative;
+			color: var(--purple);
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	left: 0;
+			// 	bottom: 20px;
+			// 	display: block;
+			// 	width: 100%;
+			// 	height: 2px;
+			// 	background-color: #5c62ec;
+			// 	border-radius: 10px;
+			// }
+		}
+
+		@media (any-hover: hover) {
+			&:not(.menu__link--active) {
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 15px;
+					width: 100%;
+					height: 2px;
+					background-color: var(--purple);
+					transform: scaleX(0);
+					transition: transform 0.3s ease-in-out;
+				}
+				&:hover {
+					color: var(--purple);
+					&::before {
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+// menu
+.menu {
+	&__body {
+		@media (max-width: 991.98px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			top: 0;
+			left: -100%;
+			transition: all 0.3s ease 0s;
+			overflow: auto;
+			background-color: var(--header-bg-mobile);
+			gap: 30px;
+			z-index: 10;
+
+			padding: 50px 15px 80px 15px;
+
+			&::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: -100%;
+				transition: all 0.3s ease 0s;
+				width: 100%;
+				height: 90px;
+				background-color: var(--header-bg-slat);
+				z-index: 2;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		row-gap: 10px;
+		column-gap: 25px;
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+			text-align: center;
+			row-gap: 50px;
+			font-size: 30px;
+		}
+	}
+}
+//========================================================================================================================================================
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}
+
+
+/* === active desktop nav pill === */
+@media (min-width: 992px) {
+	.menu__list .menu__link {
+		isolation: isolate;
+	}
+
+	.menu__list .menu__link--active {
+		color: #ffffff !important;
+	}
+
+	.menu__list .menu__link--active::after {
+		content: '';
+		position: absolute;
+		left: -14px;
+		right: -14px;
+		top: 50%;
+		height: 40px;
+		transform: translateY(-50%);
+		border-radius: 999px;
+		background: linear-gradient(135deg, rgba(108, 99, 255, 0.92), rgba(92, 98, 236, 0.88));
+		border: 1px solid rgba(124, 92, 255, 0.22);
+		box-shadow: 0 8px 18px rgba(92, 98, 236, 0.14);
+		z-index: -1;
+	}
+}
+/* === /active desktop nav pill === */

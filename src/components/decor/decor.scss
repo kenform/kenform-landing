@@ -1,0 +1,473 @@
+.decor-layer {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	overflow: hidden;
+	color: var(--purple, #5c62ec);
+}
+
+.section__intro,
+.section__skills,
+.projects__bg,
+.footer {
+	position: relative;
+	overflow: hidden;
+}
+
+.section__intro > .intro,
+.section__skills > *,
+.projects__bg > .__container,
+.footer > .footer__container {
+	position: relative;
+	z-index: 1;
+}
+
+.decor-layer__item {
+	position: absolute;
+	display: block;
+	opacity: 0.72;
+	will-change: transform;
+}
+
+.decor-layer__item--ring {
+	border: 1px solid rgba(92, 98, 236, 0.16);
+	border-radius: 999px;
+}
+
+.decor-layer__item--square {
+	border: 1px solid rgba(92, 98, 236, 0.16);
+	border-radius: 18px;
+	background: rgba(92, 98, 236, 0.025);
+	transform: rotate(12deg);
+}
+
+.decor-layer__item--line {
+	height: 1px;
+	background: linear-gradient(90deg, rgba(92, 98, 236, 0.46), transparent);
+}
+
+.decor-layer__item--dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 999px;
+	background: rgba(92, 98, 236, 0.82);
+	box-shadow: 0 0 0 6px rgba(92, 98, 236, 0.07);
+}
+
+.decor-layer__item--a,
+.decor-layer__item--c,
+.decor-layer__item--g {
+	animation: decorFloatA 12s ease-in-out infinite;
+}
+
+.decor-layer__item--b,
+.decor-layer__item--d,
+.decor-layer__item--h {
+	animation: decorFloatB 14s ease-in-out infinite;
+}
+
+.decor-layer__item--e,
+.decor-layer__item--f,
+.decor-layer__item--i {
+	animation: decorFloatC 16s ease-in-out infinite;
+}
+
+.decor-layer--intro .decor-layer__item--a {
+	width: 230px;
+	height: 230px;
+	right: 6vw;
+	top: 15%;
+}
+
+.decor-layer--intro .decor-layer__item--b {
+	width: 132px;
+	height: 132px;
+	left: 1.5vw;
+	bottom: 15%;
+}
+
+.decor-layer--intro .decor-layer__item--c {
+	width: 78px;
+	height: 78px;
+	right: 46%;
+	top: 22%;
+}
+
+.decor-layer--intro .decor-layer__item--d {
+	width: 42px;
+	height: 42px;
+	left: 48%;
+	bottom: 18%;
+}
+
+.decor-layer--intro .decor-layer__item--e {
+	width: 54px;
+	left: 13vw;
+	top: 36%;
+}
+
+.decor-layer--intro .decor-layer__item--f {
+	width: 74px;
+	right: 22vw;
+	bottom: 24%;
+}
+
+.decor-layer--intro .decor-layer__item--g {
+	left: 20vw;
+	bottom: 27%;
+}
+
+.decor-layer--intro .decor-layer__item--h {
+	right: 31vw;
+	top: 32%;
+}
+
+.decor-layer--intro .decor-layer__item--i {
+	right: 12vw;
+	bottom: 34%;
+}
+
+.decor-layer--skills .decor-layer__item--a {
+	width: 170px;
+	height: 170px;
+	left: 5vw;
+	top: 18%;
+}
+
+.decor-layer--skills .decor-layer__item--b {
+	width: 110px;
+	height: 110px;
+	right: 6vw;
+	bottom: 14%;
+}
+
+.decor-layer--skills .decor-layer__item--c {
+	width: 52px;
+	height: 52px;
+	right: 22vw;
+	top: 20%;
+}
+
+.decor-layer--skills .decor-layer__item--d {
+	width: 38px;
+	height: 38px;
+	left: 26vw;
+	bottom: 18%;
+}
+
+.decor-layer--skills .decor-layer__item--e {
+	width: 68px;
+	left: 9vw;
+	bottom: 32%;
+}
+
+.decor-layer--skills .decor-layer__item--f {
+	width: 56px;
+	right: 18vw;
+	top: 36%;
+}
+
+.decor-layer--skills .decor-layer__item--g {
+	left: 17vw;
+	top: 24%;
+}
+
+.decor-layer--skills .decor-layer__item--h {
+	right: 34vw;
+	bottom: 20%;
+}
+
+.decor-layer--skills .decor-layer__item--i {
+	right: 8vw;
+	top: 24%;
+}
+
+.decor-layer--projects .decor-layer__item--a {
+	width: 210px;
+	height: 210px;
+	left: 4vw;
+	top: 18%;
+}
+
+.decor-layer--projects .decor-layer__item--b {
+	width: 150px;
+	height: 150px;
+	right: 5vw;
+	top: 28%;
+}
+
+.decor-layer--projects .decor-layer__item--c {
+	width: 58px;
+	height: 58px;
+	left: 31vw;
+	top: 18%;
+}
+
+.decor-layer--projects .decor-layer__item--d {
+	width: 46px;
+	height: 46px;
+	right: 30vw;
+	bottom: 18%;
+}
+
+.decor-layer--projects .decor-layer__item--e {
+	width: 78px;
+	left: 15vw;
+	top: 30%;
+}
+
+.decor-layer--projects .decor-layer__item--f {
+	width: 92px;
+	right: 14vw;
+	bottom: 22%;
+}
+
+.decor-layer--projects .decor-layer__item--g {
+	left: 10vw;
+	bottom: 20%;
+}
+
+.decor-layer--projects .decor-layer__item--h {
+	right: 39vw;
+	top: 24%;
+}
+
+.decor-layer--projects .decor-layer__item--i {
+	right: 7vw;
+	top: 48%;
+}
+
+.decor-layer--contacts .decor-layer__item--a {
+	width: 180px;
+	height: 180px;
+	left: 3vw;
+	bottom: 10%;
+}
+
+.decor-layer--contacts .decor-layer__item--b {
+	width: 130px;
+	height: 130px;
+	right: 4vw;
+	top: 17%;
+}
+
+.decor-layer--contacts .decor-layer__item--c {
+	width: 48px;
+	height: 48px;
+	left: 41vw;
+	top: 22%;
+}
+
+.decor-layer--contacts .decor-layer__item--d {
+	width: 40px;
+	height: 40px;
+	right: 28vw;
+	bottom: 18%;
+}
+
+.decor-layer--contacts .decor-layer__item--e {
+	width: 72px;
+	left: 8vw;
+	top: 34%;
+}
+
+.decor-layer--contacts .decor-layer__item--f {
+	width: 72px;
+	right: 12vw;
+	bottom: 24%;
+}
+
+.decor-layer--contacts .decor-layer__item--g {
+	left: 24vw;
+	bottom: 22%;
+}
+
+.decor-layer--contacts .decor-layer__item--h {
+	right: 42vw;
+	top: 18%;
+}
+
+.decor-layer--contacts .decor-layer__item--i {
+	right: 7vw;
+	bottom: 38%;
+}
+
+.decor-layer--footer .decor-layer__item {
+	opacity: 0.36;
+}
+
+.decor-layer--footer .decor-layer__item--a {
+	width: 160px;
+	height: 160px;
+	right: 8vw;
+	top: 6%;
+}
+
+.decor-layer--footer .decor-layer__item--b {
+	width: 92px;
+	height: 92px;
+	left: 7vw;
+	bottom: 12%;
+}
+
+.decor-layer--footer .decor-layer__item--c {
+	width: 42px;
+	height: 42px;
+	right: 31vw;
+	bottom: 18%;
+}
+
+.decor-layer--footer .decor-layer__item--d {
+	display: none;
+}
+
+.decor-layer--footer .decor-layer__item--e {
+	width: 84px;
+	left: 18vw;
+	top: 26%;
+}
+
+.decor-layer--footer .decor-layer__item--f {
+	width: 64px;
+	right: 20vw;
+	bottom: 28%;
+}
+
+.decor-layer--footer .decor-layer__item--g {
+	left: 33vw;
+	bottom: 22%;
+}
+
+.decor-layer--footer .decor-layer__item--h {
+	right: 12vw;
+	top: 22%;
+}
+
+.decor-layer--footer .decor-layer__item--i {
+	display: none;
+}
+
+@keyframes decorFloatA {
+	0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+	50% { transform: translate3d(10px, -12px, 0) rotate(4deg); }
+}
+
+@keyframes decorFloatB {
+	0%, 100% { transform: translate3d(0, 0, 0) rotate(12deg); }
+	50% { transform: translate3d(-10px, 10px, 0) rotate(18deg); }
+}
+
+@keyframes decorFloatC {
+	0%, 100% { transform: translate3d(0, 0, 0); }
+	50% { transform: translate3d(8px, 8px, 0); }
+}
+
+@media (max-width: 991.98px) {
+	.decor-layer__item--a,
+	.decor-layer__item--b {
+		opacity: 0.32;
+	}
+
+	.decor-layer__item--c,
+	.decor-layer__item--d,
+	.decor-layer__item--f,
+	.decor-layer__item--h,
+	.decor-layer__item--i {
+		display: none;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.decor-layer__item--a,
+	.decor-layer__item--b,
+	.decor-layer__item--e,
+	.decor-layer__item--g {
+		opacity: 0.22;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.decor-layer__item {
+		animation: none !important;
+	}
+}
+
+
+/* === portfolio decor balance v2 === */
+
+/* About / Home: чуть больше характера */
+.decor-layer--intro .decor-layer__item,
+.decor-layer--skills .decor-layer__item {
+	opacity: 0.82;
+}
+
+.decor-layer--intro .decor-layer__item--ring,
+.decor-layer--skills .decor-layer__item--ring {
+	border-color: rgba(92, 98, 236, 0.22);
+}
+
+.decor-layer--intro .decor-layer__item--square,
+.decor-layer--skills .decor-layer__item--square {
+	border-color: rgba(92, 98, 236, 0.22);
+	background: rgba(92, 98, 236, 0.035);
+}
+
+.decor-layer--intro .decor-layer__item--dot,
+.decor-layer--skills .decor-layer__item--dot {
+	opacity: 0.92;
+	box-shadow: 0 0 0 7px rgba(92, 98, 236, 0.085);
+}
+
+/* Projects: почти фоново, чтобы карточки были главными */
+.decor-layer--projects .decor-layer__item {
+	opacity: 0.2;
+}
+
+.decor-layer--projects .decor-layer__item--c,
+.decor-layer--projects .decor-layer__item--d,
+.decor-layer--projects .decor-layer__item--h,
+.decor-layer--projects .decor-layer__item--i {
+	display: none;
+}
+
+/* Contacts: очень спокойно, форма должна быть главным объектом */
+.decor-layer--contacts .decor-layer__item {
+	opacity: 0.16;
+}
+
+.decor-layer--contacts .decor-layer__item--c,
+.decor-layer--contacts .decor-layer__item--d,
+.decor-layer--contacts .decor-layer__item--f,
+.decor-layer--contacts .decor-layer__item--h,
+.decor-layer--contacts .decor-layer__item--i {
+	display: none;
+}
+
+/* Footer: максимально деликатно */
+.decor-layer--footer .decor-layer__item {
+	opacity: 0.12;
+}
+
+.decor-layer--footer .decor-layer__item--a,
+.decor-layer--footer .decor-layer__item--c,
+.decor-layer--footer .decor-layer__item--f,
+.decor-layer--footer .decor-layer__item--h {
+	display: none;
+}
+
+/* Mobile: меньше шума везде */
+@media (max-width: 767.98px) {
+	.decor-layer--intro .decor-layer__item,
+	.decor-layer--skills .decor-layer__item {
+		opacity: 0.28;
+	}
+
+	.decor-layer--projects .decor-layer__item,
+	.decor-layer--contacts .decor-layer__item,
+	.decor-layer--footer .decor-layer__item {
+		opacity: 0.08;
+	}
+}
+/* === /portfolio decor balance v2 === */
+

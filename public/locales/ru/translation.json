@@ -1,0 +1,100 @@
+{
+  "header": {
+    "logo-title": "Портфолио",
+    "About": "Обо мне",
+    "projects": "Проекты",
+    "reviews": "Отзывы",
+    "contacts": "Контакты",
+    "Button": "GitHub Профиль"
+  },
+  "intro": {
+    "title": "Привет, я Сергей",
+    "IM": "Делаю ",
+    "typeWritter-programmer": "сайты под задачи",
+    "typeWritter-frontend": "лендинги и интерфейсы",
+    "text": "Создаю современные сайты, лендинги и небольшие веб-приложения: от структуры и визуала до адаптива, GitHub и деплоя.",
+    "staticRole": "сайты под задачи"
+  },
+  "home": {
+    "ctaProjects": "Смотреть проекты",
+    "ctaContacts": "Связаться",
+    "focus1": "Mobile-first",
+    "focus2": "React / Vite / Next.js",
+    "focus3": "GitHub + Vercel"
+  },
+  "section": {
+    "skills": {
+      "title": "Навыки",
+      "suptitle": "Технологии и инструменты, с которыми я работаю."
+    },
+    "projects": {
+      "title": "Работы",
+      "suptitle": "Подборка сайтов, лендингов и интерфейсов, которые я делал."
+    },
+    "contacts": {
+      "title": "Контакты",
+      "suptitle": "Есть идея сайта, лендинга или портфолио? Напишите коротко задачу."
+    }
+  },
+  "projects": {
+    "toggle-button": {
+      "all": "Все",
+      "store": "Магазины",
+      "landing": "Лендинги",
+      "mini": "Мини-проекты",
+      "new": "Новые"
+    },
+    "details": {
+      "buttons": {
+        "view-code1": "Посмотреть",
+        "view-code2": "код",
+        "live-app1": "Открыть",
+        "live-app2": "сайт"
+      }
+    }
+  },
+  "Form": {
+    "title": "Напиши мне",
+    "placeholder-email": "Ваша почта",
+    "placeholder-name": "Ваше имя",
+    "placeholder-message": "Сообщение",
+    "Button-submit": "Отправить",
+    "Button-sending": "Отправляем...",
+    "Button-sent": "Отправлено!",
+    "Button-error": "Не удалось отправить",
+    "Button-close": "Закрыть",
+    "errors": {
+      "emailRequired": "Введите вашу почту",
+      "emailInvalid": "Введите корректную почту. Например: name@gmail.com",
+      "nameRequired": "Введите ваше имя",
+      "messageRequired": "Введите сообщение"
+    }
+  },
+  "a11y": {
+    "profile": "Аватар Сергея",
+    "burger": "Открыть меню",
+    "githubIcon": "Иконка GitHub",
+    "projectPreview": "Превью проекта {{title}}"
+  },
+  "language": {
+    "switchTo": "Переключить язык на {{lang}}"
+  },
+  "labels": {
+    "members": "Участники",
+    "close": "Закрыть",
+    "education": "Образование",
+    "experience": "Опыт",
+    "openCase": "Открыть кейс"
+  },
+  "footer": {
+    "home": "Главная",
+    "projects": "Проекты",
+    "reviews": "Отзывы",
+    "contacts": "Контакты",
+    "description": "Сайты, лендинги и интерфейсы — аккуратно, адаптивно и без лишней сложности.",
+    "github": "GitHub",
+    "rights": "© {{year}} Sergey. Все права защищены.",
+    "built": "Built by Sergey · Web & AI Development",
+    "crafted": "Crafted with code, runes and artificial intelligence."
+  }
+}

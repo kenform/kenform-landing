@@ -1,0 +1,74 @@
+
+.dark-mode-btn__icon {
+	position: relative;
+	z-index: 8;
+}
+
+///////////////////////////////////////////////////
+
+.dark__mode {
+	display: flex;
+	order: 3;
+	@media (max-width: 767.9px) {
+		order: 0;
+	}
+}
+
+.dark__mode-label {
+	// width: 65px;
+	height: 29px;
+	position: relative;
+	display: block;
+	background: #272727;
+	border-radius: 200px;
+	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	transition: 0.3s;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+
+	&::after {
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 1.9px;
+		display: block;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		background-color: #fff;
+		transition: 0.3s;
+		z-index: 9;
+	}
+
+	svg {
+		// position: absolute;
+		width: 29px;
+		top: 8px;
+		z-index: 3;
+	}
+}
+
+.dark__mode-input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+
+	border-radius: 50px;
+	background-color: #272727;
+
+	&.active + .dark__mode-label:after {
+		left: 57px;
+		transform: translateX(-100%);
+	}
+}
+
+.dark__mode-label:active:after {
+	width: 30px;
+}
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}
