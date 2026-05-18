@@ -35,3 +35,302 @@ html {
 .menu__link {
         cursor: pointer;
 }
+
+/* landing one-page bugfix: clean header, mobile menu and section gap */
+html,
+body,
+#root,
+.wrapper,
+.landing-page {
+        background: #171717;
+}
+
+body._lock {
+        overflow: hidden;
+}
+
+.landing-page {
+        min-height: 100vh;
+}
+
+.landing-page section,
+.landing-page .landing-anchor,
+.landing-page .projects__bg,
+.landing-page #projects,
+.landing-page #reviews,
+.landing-page #contacts {
+        background-color: #171717;
+}
+
+.landing-page #projects {
+        margin-bottom: 0;
+        padding-bottom: 0;
+}
+
+.landing-page #projects::after,
+.landing-page .projects__bg::after {
+        content: none;
+        display: none;
+}
+
+.landing-page #reviews {
+        margin-top: 0;
+        padding-top: clamp(72px, 8vw, 116px);
+}
+
+.landing-page #projects + #reviews {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.landing-header {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: rgba(10, 10, 12, 0.86);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px);
+}
+
+.landing-header__inner {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+}
+
+.landing-logo {
+        position: relative;
+        z-index: 2;
+        flex: 0 0 auto;
+}
+
+.landing-desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(22px, 3vw, 42px);
+        margin-left: auto;
+}
+
+.landing-desktop-nav a {
+        color: rgba(255, 255, 255, 0.76);
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.landing-desktop-nav a:hover {
+        color: #ffffff;
+        transform: translateY(-1px);
+}
+
+.landing-header__actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-left: clamp(10px, 2vw, 26px);
+}
+
+.landing-burger {
+        position: relative;
+        z-index: 230;
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        cursor: pointer;
+}
+
+.landing-burger span {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        border-radius: 999px;
+        background: #ffffff;
+        transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+
+.landing-burger span:nth-child(1) {
+        top: 15px;
+}
+
+.landing-burger span:nth-child(2) {
+        top: 23px;
+}
+
+.landing-burger span:nth-child(3) {
+        top: 31px;
+}
+
+.landing-burger.is-active span:nth-child(1) {
+        top: 23px;
+        transform: rotate(45deg);
+}
+
+.landing-burger.is-active span:nth-child(2) {
+        opacity: 0;
+}
+
+.landing-burger.is-active span:nth-child(3) {
+        top: 23px;
+        transform: rotate(-45deg);
+}
+
+.landing-menu-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 210;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0);
+        transition: background 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.landing-menu-backdrop.is-open {
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.62);
+        backdrop-filter: blur(10px);
+}
+
+.landing-mobile-menu {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 220;
+        width: min(420px, calc(100vw - 36px));
+        min-height: calc(100svh - 36px);
+        padding: 34px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(92, 98, 236, 0.35);
+        border-radius: 30px;
+        background:
+                radial-gradient(circle at 80% 0%, rgba(92, 98, 236, 0.22), transparent 34%),
+                linear-gradient(180deg, rgba(24, 24, 31, 0.98), rgba(10, 10, 13, 0.98));
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.62);
+        opacity: 0;
+        pointer-events: none;
+        transform: translate3d(26px, -12px, 0) scale(0.97);
+        transition: opacity 0.22s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.landing-mobile-menu.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate3d(0, 0, 0) scale(1);
+}
+
+.landing-mobile-menu__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+}
+
+.landing-mobile-menu__logo {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        text-decoration: none;
+}
+
+.landing-mobile-menu__close {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 34px;
+        line-height: 1;
+        cursor: pointer;
+}
+
+.landing-mobile-menu__links {
+        display: grid;
+        gap: 18px;
+        margin-top: 58px;
+}
+
+.landing-mobile-menu__links a {
+        color: #ffffff;
+        font-size: clamp(34px, 9vw, 54px);
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        text-decoration: none;
+}
+
+.landing-mobile-menu__github {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        margin-top: auto;
+        border-radius: 999px;
+        color: #ffffff;
+        background: #5c62ec;
+        font-size: 17px;
+        font-weight: 900;
+        text-decoration: none;
+        box-shadow: 0 18px 46px rgba(92, 98, 236, 0.32);
+}
+
+.menu__body,
+.menu__list,
+.menu__item {
+        pointer-events: none;
+}
+
+.landing-header .menu__body,
+.landing-header .menu__list,
+.landing-header .menu__item {
+        display: none;
+}
+
+@media (max-width: 767px) {
+        .landing-header__inner {
+                min-height: 74px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+        }
+
+        .landing-desktop-nav {
+                display: none;
+        }
+
+        .landing-header__actions {
+                gap: 14px;
+                margin-left: auto;
+        }
+
+        .landing-logo .logo__icon {
+                width: 38px;
+                height: 38px;
+        }
+
+        .landing-mobile-menu {
+                top: 12px;
+                right: 12px;
+                width: calc(100vw - 24px);
+                min-height: calc(100svh - 24px);
+                padding: 28px;
+                border-radius: 26px;
+        }
+
+        .landing-mobile-menu__links {
+                margin-top: 48px;
+        }
+}
+
+@media (min-width: 768px) {
+        .landing-burger {
+                display: none;
+        }
+}
